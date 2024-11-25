@@ -18,16 +18,16 @@ public class BinarySearch {
         var right = sortedNumberArray.length - 1;
 
         while (left <= right) {
-            final var mid = Math.floorDiv(left + right, 2);
+            final var middle = left + (right - left) / 2;
 
-            if (sortedNumberArray[mid] == target)
-                return mid;
+            if (sortedNumberArray[middle] == target)
+                return middle;
 
-            else if (sortedNumberArray[mid] < target)
-                left = mid + 1;
+            else if (sortedNumberArray[middle] < target)
+                left = middle + 1;
 
-            else if (sortedNumberArray[mid] > target)
-                right = mid - 1;
+            else if (sortedNumberArray[middle] > target)
+                right = middle - 1;
         }
 
         return -1;

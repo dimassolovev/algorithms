@@ -15,55 +15,55 @@ public class BinarySearchTest {
     @Test
     void testElementPresentInMiddle() {
         int[] array = {1, 3, 5, 7, 9, 11};
-        Assertions.assertEquals(2, this.binarySearch.search(array, 5)); // Элемент находится в середине
+        Assertions.assertEquals(2, this.binarySearch.search(array, 5));
     }
 
     @Test
     void testElementPresentAtStart() {
         int[] array = {1, 3, 5, 7, 9, 11};
-        Assertions.assertEquals(0, this.binarySearch.search(array, 1)); // Элемент находится в начале
+        Assertions.assertEquals(0, this.binarySearch.search(array, 1));
     }
 
     @Test
     void testElementPresentAtEnd() {
         int[] array = {1, 3, 5, 7, 9, 11};
-        Assertions.assertEquals(5, this.binarySearch.search(array, 11)); // Элемент находится в конце
+        Assertions.assertEquals(5, this.binarySearch.search(array, 11));
     }
 
     @Test
     void testElementNotPresent() {
         int[] array = {1, 3, 5, 7, 9, 11};
-        Assertions.assertEquals(-1, this.binarySearch.search(array, 4)); // Элемент отсутствует
+        Assertions.assertEquals(-1, this.binarySearch.search(array, 4));
     }
 
     @Test
     void testEmptyArray() {
         int[] array = {};
-        Assertions.assertEquals(-1, this.binarySearch.search(array, 5)); // Пустой массив
+        Assertions.assertEquals(-1, this.binarySearch.search(array, 5));
     }
 
     @Test
     void testSingleElementArrayFound() {
         int[] array = {5};
-        Assertions.assertEquals(0, this.binarySearch.search(array, 5)); // Один элемент, он найден
+        Assertions.assertEquals(0, this.binarySearch.search(array, 5));
     }
 
     @Test
     void testSingleElementArrayNotFound() {
         int[] array = {5};
-        Assertions.assertEquals(-1, this.binarySearch.search(array, 7)); // Один элемент, не найден
+        Assertions.assertEquals(-1, this.binarySearch.search(array, 7));
     }
 
     @Test
     void testNegativeNumbers() {
         int[] array = {-10, -5, 0, 5, 10};
-        Assertions.assertEquals(1, this.binarySearch.search(array, -5)); // Отрицательное число найдено
+        Assertions.assertEquals(1, this.binarySearch.search(array, -5));
     }
 
     @Test
     void testLargeArray() {
         int[] array = new int[1000];
         for (int i = 0; i < 1000; i++) array[i] = i; // Массив от 0 до 999
-        Assertions.assertEquals(500, this.binarySearch.search(array, 500)); // Элемент в середине
+        Assertions.assertEquals(500, this.binarySearch.search(array, 500));
     }
 }
