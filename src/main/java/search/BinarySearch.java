@@ -14,11 +14,11 @@ public class BinarySearch {
         * Search a 2D Matrix II:                    https://leetcode.com/problems/search-a-2d-matrix-ii/description/
      */
     public int search(int[] sortedNumberArray, int target) {
-        var left = 0;
-        var right = sortedNumberArray.length - 1;
+        int left = 0;
+        int right = sortedNumberArray.length - 1;
 
         while (left <= right) {
-            final var middle = left + (right - left) / 2;
+            final int middle = left + (right - left) / 2;
 
             if (sortedNumberArray[middle] == target)
                 return middle;
